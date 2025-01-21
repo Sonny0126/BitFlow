@@ -1,22 +1,36 @@
-<script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+<!DOCTYPE html>
+<html lang ="ko">
+<head>
+    <meta charset="utf-8">
+    <title>카카오 로그인</title>
+    <link rel="stylesheet" href="index.css"> 
+    <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+</head>
+<body>
+    <div class="login-container">
+        <h1>kakao 로그인</h1>
+        <p>계정과 비밀번호 입력없이<br>카카오톡으로 로그인 해보세요.</p>
+        <button id="kakao-login-btn"class="kakao-login-btn">
+            <span class="kakao-icon"><img src="kakaotalk_logo.png"></span> 카카오톡으로 로그인
+        </button>
+    </div>
+    <script>
+    // 카카오 SDK 초기화
+    Kakao.init('YOUR_APP_KEY');  // 애플리케이션 등록 시 발급받은 JavaScript 키 -> 아직 안받음음
 
-<button id="kakao-login-btn">카카오 로그인</button>
-
-<script>
-// 카카오 SDK 초기화
-Kakao.init('YOUR_APP_KEY');  // 애플리케이션 등록 시 발급받은 JavaScript 키
-
-// 카카오 로그인 버튼 클릭 시 로그인 처리
-document.getElementById('kakao-login-btn').onclick = function() {
-    Kakao.Auth.login({
-        success: function(authObj) {
-            console.log(authObj);
-            // 로그인 성공 시 처리
-            // authObj.access_token을 서버로 전송하여 추가 인증 처리 가능
-        },
-        fail: function(err) {
-            alert(JSON.stringify(err));
-        }
-    });
-};
-</script>
+    // 카카오 로그인 버튼 클릭 시 로그인 처리
+    document.getElementById('kakao-login-btn').onclick = function() {
+        Kakao.Auth.login({
+            success: function(authObj) {
+                console.log(authObj);
+                // 로그인 성공 시 처리
+                // authObj.access_token을 서버로 전송하여 추가 인증 처리 가능
+            },
+            fail: function(err) {
+                alert(JSON.stringify(err));
+            }
+        });
+    };
+    </script>
+</body>
+</html>

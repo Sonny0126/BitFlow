@@ -1,0 +1,81 @@
+/* 로그인 컨테이너 스타일 */
+.login-container {
+    max-width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #e2e2e2;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+/* 제목 스타일 */
+.login-container h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* 설명 텍스트 스타일 */
+.login-container p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* 카카오 로그인 버튼 스타일 */
+.kakao-login-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffe812;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #381e1f;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%; /* 버튼 너비를 컨테이너에 맞춤 */
+    max-width: 250px; /* 버튼 최대 너비 제한 */
+    margin: 0 auto; /* 버튼을 컨테이너 중앙에 정렬 */
+    text-align: center; /* 텍스트 정렬 */
+}
+
+/* 버튼 호버 효과 */
+.kakao-login-btn:hover {
+    background-color: #fddc3f;
+    transform: translateY(-2px);
+}
+
+/* 버튼 아이콘 */
+.kakao-login-btn .kakao-icon {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.kakao-login-btn .kakao-icon img {
+    width: 20px; 
+    height: 20px; 
+    margin-right: 8px; 
+    vertical-align: middle; 
+}
+
+/* 모바일 반응형 */
+@media screen and (max-width: 480px) {
+    .login-container {
+        padding: 15px;
+    }
+    .kakao-login-btn {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+    .kakao-login-btn .kakao-icon {
+        font-size: 16px;
+    }
+}
